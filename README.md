@@ -1,4 +1,4 @@
-COnfuserDumper by COB
+ConfuserDumper by COB
 =====================
 
 Description
