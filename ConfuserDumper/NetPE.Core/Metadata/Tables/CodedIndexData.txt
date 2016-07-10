@@ -1,0 +1,81 @@
+﻿
+-TypeDefOrRef            2
+        TypeDef                0
+        TypeRef                1
+        TypeSpec               2
+
+-HasConstant            2
+        Field                  0
+        Param                  1
+        Property               2
+
+-HasCustomAttribute     5
+        MethodDef              0
+        Field                  1
+        TypeRef                2
+        TypeDef                3
+        Param                  4
+        InterfaceImpl          5
+        MemberRef              6
+        Module                 7
+        Permission             8
+        Property               9
+        Event                  10
+        StandAloneSig          11
+        ModuleRef              12
+        TypeSpec               13
+        Assembly               14
+        AssemblyRef            15
+        File                   16
+        ExportedType           17
+        ManifestResource       18
+
+-HasFieldMarshall       1
+        Field                  0
+        Param                  1
+
+-HasDeclSecurity        2
+        TypeDef                0
+        MethodDef              1
+        Assembly               2
+
+-MemberRefParent        3
+        TypeDef                0
+        TypeRef                1
+        ModuleRef              2
+        MethodDef              3
+        TypeSpec               4
+
+-HasSemantics           1
+        Event                  0
+        Property               1
+
+-MethodDefOrRef         1
+        MethodDef              0
+        MemberRef              1
+
+-MemberForwarded        1
+        Field                  0
+        MethodDef              1
+
+-Implementation         2
+        File                   0
+        AssemblyRef            1
+        ExportedType           2
+
+-CustomAttributeType    3
+        Reserved               0
+        Reserved               1
+        MethodDef              2
+        MemberRef              3
+        Reserved               4
+
+-ResolutionScope        2
+        Module                 0
+        ModuleRef              1
+        AssemblyRef            2
+        TypeRef                3
+
+-TypeOrMethodDef        1
+        TypeDef                0
+        MethodDef              1

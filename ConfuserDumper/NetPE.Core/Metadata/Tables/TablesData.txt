@@ -1,0 +1,220 @@
+﻿
+-Assembly
+    uint                HashAlgId
+    ushort              MajorVersion
+    ushort              MinorVersion
+    ushort              BuildNumber
+    ushort              RevisionNumber
+    uint                Flags
+    #Blob               PublicKey
+    #Strings            Name
+    #Strings            Locale
+
+-AssemblyOS
+    uint                OSPlatformId
+    uint                OSMajorVersion
+    uint                OSMinorVersion
+
+-AssemblyProcessor
+    uint                Processor
+
+-AssemblyRef
+    ushort              MajorVersion
+    ushort              MinorVersion
+    ushort              BuildNumber
+    ushort              RevisionNumber
+    uint                Flags
+    #Blob               PublicKeyOrToken
+    #Strings            Name
+    #Strings            Locale
+    #Blob               HashValue
+
+-AssemblyRefOS
+    uint                OSPlatformId
+    uint                OSMajorVersion
+    uint                OSMinorVersion
+    AssemblyRef         AssemblyRef
+
+-AssemblyRefProcessor
+    uint                Processor
+    AssemblyRef         AssemblyRef
+
+-ClassLayout
+    ushort              PackingSize
+    uint                ClassSize
+    TypeDef             Parent
+
+-Constant
+    byte                Type
+    HasConstant         Parent
+    #Blob               Value
+
+-CustomAttribute
+    HasCustomAttribute  Parent
+    CustomAttributeType Type
+    #Blob               Value
+
+-DeclSecurity
+    ushort              Action
+    HasDeclSecurity     Parent
+    #Blob               PermissionSet
+
+-ENCLog
+    uint                Token
+    uint                FuncCode
+
+-ENCMap
+    uint                Token
+
+-Event
+    ushort              EventFlags
+    #Strings            Name
+    TypeDefOrRef        EventType
+
+-EventMap
+    TypeDef             Parent
+    Event               EventList
+
+-EventPtr
+    Event               Event
+
+-ExportedType
+    uint                Flags
+    uint                TypeDefId
+    #Strings            TypeName
+    #Strings            TypeNamespace
+    Implementation      Implementation
+
+-Field
+    ushort              Flags
+    #Strings            Name
+    #Blob               Signature
+
+-FieldLayout
+    uint                OffSet
+    Field               Field
+
+-FieldMarshal
+    HasFieldMarshall    Parent
+    #Blob               NativeType
+
+-FieldPtr
+    Field               Field
+
+-FieldRVA
+    uint                RVA
+    Field               Field
+
+-File
+    uint                Flags
+    #Strings            Name
+    #Blob               HashValue
+
+-GenericParam
+    ushort              Number
+    ushort              Flags
+    TypeOrMethodDef     Owner
+    #Strings            Name
+
+-GenericParamConstraint
+    GenericParam        Owner
+    TypeDefOrRef        Constraint
+
+-ImplMap
+    ushort              MappingFlags
+    MemberForwarded     MemberForwarded
+    #Strings            ImportName
+    ModuleRef           ImportScope
+
+-InterfaceImpl
+    TypeDef             Class
+    TypeDefOrRef        Interface
+
+-ManifestResource
+    uint                Offset
+    uint                Flags
+    #Strings            Name
+    Implementation      Implementation
+
+-MemberRef
+    MemberRefParent     Class
+    #Strings            Name
+    #Blob               Signature
+
+-Method
+    uint                RVA
+    ushort              ImplFlags
+    ushort              Flags
+    #Strings            Name
+    #Blob               Signature
+    Param               ParamList
+
+-MethodImpl
+    TypeDef             Class
+    MethodDefOrRef      MethodBody
+    MethodDefOrRef      MethodDeclaration
+
+-MethodPtr
+    Method              Method
+
+-MethodSemantics
+    ushort              Semantic
+    Method              Method
+    HasSemantics        Association
+
+-MethodSpec
+    MethodDefOrRef      Method
+    #Blob               Instantiation
+
+-Module
+    ushort              Generation
+    #Strings            Name
+    #GUID               Mvid
+    #GUID               EncId
+    #GUID               EncBaseId
+
+-ModuleRef
+    #Strings            Name
+
+-NestedClass
+    TypeDef             NestedClass
+    TypeDef             EnclosingClass
+
+-Param
+    ushort              Flags
+    ushort              Sequence
+    #Strings            Name
+
+-ParamPtr
+    Param               Param
+
+-Property
+    ushort              PropFlags
+    #Strings            Name
+    #Blob               Type
+
+-PropertyMap
+    TypeDef             Parent
+    Property            PropertyList
+
+-PropertyPtr
+    Property            Property
+
+-StandAloneSig
+    #Blob               Signature
+
+-TypeDef
+    uint                Flags
+    #Strings            Name
+    #Strings            Namespace
+    TypeDefOrRef        Extends
+    Field               FieldList
+    Method              MethodList
+
+-TypeRef
+    ResolutionScope     ResolutionScope
+    #Strings            Name
+    #Strings            Namespace
+
+-TypeSpec
+    #Blob               Signature

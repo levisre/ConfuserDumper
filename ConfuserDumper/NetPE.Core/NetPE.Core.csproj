@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{560ADD94-F224-4866-9D09-9F7E8A9267F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetPE.Core</RootNamespace>
+    <AssemblyName>NetPE.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataDirectories\CertificateDirectory.cs" />
+    <Compile Include="DataDirectories\DataDirectory.cs" />
+    <Compile Include="DataDirectories\DebugDirectory.cs" />
+    <Compile Include="DataDirectories\ExportDirectory.cs" />
+    <Compile Include="DataDirectories\IATDirectory.cs" />
+    <Compile Include="DataDirectories\ImportDirectory.cs" />
+    <Compile Include="DataDirectories\CLRDirectory.cs" />
+    <Compile Include="DataDirectories\RelocationDirectory.cs" />
+    <Compile Include="DataDirectories\ResourceDirectory.cs" />
+    <Compile Include="DataDirectories\TLSDirectory.cs" />
+    <Compile Include="IOs\PeIOs.cs" />
+    <Compile Include="Metadata\Heaps\BlobHeap.cs" />
+    <Compile Include="Metadata\Heaps\GUIDHeap.cs" />
+    <Compile Include="Metadata\Heaps\Heap.cs" />
+    <Compile Include="Metadata\Heaps\StringsHeap.cs" />
+    <Compile Include="Metadata\Tables\TableRw.cs" />
+    <Compile Include="Metadata\Heaps\TablesHeap.cs" />
+    <Compile Include="Metadata\Heaps\USHeap.cs" />
+    <Compile Include="IOs\MetadataIO.cs" />
+    <Compile Include="Metadata\MetadataRoot.cs" />
+    <Compile Include="Metadata\MetadataStream.cs" />
+    <Compile Include="Metadata\MetadataTokenProvider.cs" />
+    <Compile Include="Metadata\Methods\DataSections.cs" />
+    <Compile Include="Metadata\Methods\ExceptionClauses.cs" />
+    <Compile Include="Metadata\Methods\Flags.cs" />
+    <Compile Include="Metadata\Methods\ManagedMethodBody.cs" />
+    <Compile Include="Metadata\Methods\MethodBody.cs" />
+    <Compile Include="Metadata\Methods\NativeMethodBody.cs" />
+    <Compile Include="Metadata\Signature\Consts.cs" />
+    <Compile Include="Metadata\Signature\CustomAttrib.cs" />
+    <Compile Include="Metadata\Signature\Elements\ArrayShape.cs" />
+    <Compile Include="Metadata\Signature\Elements\CustomMod.cs" />
+    <Compile Include="Metadata\Signature\Elements\Param.cs" />
+    <Compile Include="Metadata\Signature\Elements\RetType.cs" />
+    <Compile Include="Metadata\Signature\Elements\Type.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\ARRAY.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\BaseType.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\CLASS.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\FNPTR.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\GENERICINST.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\MVAR.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\PTR.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\SZARRAY.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\VALUETYPE.cs" />
+    <Compile Include="Metadata\Signature\Elements\Types\VAR.cs" />
+    <Compile Include="Metadata\Signature\MarshalSpec.cs" />
+    <Compile Include="Metadata\Signature\Signature.cs" />
+    <Compile Include="Metadata\Signature\SignatureHelper.cs" />
+    <Compile Include="IOs\SignatureIO.cs" />
+    <Compile Include="Metadata\Signature\Signatures\FieldSig.cs" />
+    <Compile Include="Metadata\Signature\Signatures\LocalVarSig.cs" />
+    <Compile Include="Metadata\Signature\Signatures\MethodSig.cs" />
+    <Compile Include="Metadata\Signature\Signatures\MethodSpec.cs" />
+    <Compile Include="Metadata\Signature\Signatures\PropertySig.cs" />
+    <Compile Include="Metadata\Signature\Signatures\StandAloneMethodSig.cs" />
+    <Compile Include="Metadata\Signature\Signatures\TypeSpec.cs" />
+    <Compile Include="Metadata\Tables\Flags.cs" />
+    <Compile Include="Metadata\Tables\Tables.cs" />
+    <Compile Include="Metadata\Token.cs" />
+    <Compile Include="Metadata\Tokens.cs" />
+    <Compile Include="Metadata\VTableFixups.cs" />
+    <Compile Include="Pe\DosHeader.cs" />
+    <Compile Include="Pe\OptionalHeader.cs" />
+    <Compile Include="Pe\PeHeader.cs" />
+    <Compile Include="Pe\Section.cs" />
+    <Compile Include="Pe\SectionHeaders.cs" />
+    <Compile Include="IOs\VirtualIOs.cs" />
+    <Compile Include="VirtualComponents.cs" />
+    <Compile Include="PeComponent.cs" />
+    <Compile Include="Helpers\NativeHelper.cs" />
+    <Compile Include="PeFile.cs" />
+    <Compile Include="PeFileFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rva.cs" />
+    <Compile Include="Helpers\StampsHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Metadata\Tables\CodedIndexData.txt" />
+    <Content Include="Metadata\Tables\TablesData.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
